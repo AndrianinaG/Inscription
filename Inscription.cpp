@@ -1,12 +1,11 @@
-#include"Inscription.h"
+#include "Inscription.h"
 
 Inscription::Inscription()
 {
-
 }
+
 Inscription::~Inscription()
 {
-
 }
 
 void Inscription::ajouter(Etudiant student)
