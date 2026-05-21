@@ -6,133 +6,166 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1181</width>
-    <height>692</height>
+    <width>1016</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="prenom_lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>30</y>
-      <width>201</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>Prenom</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>101</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>INSCRIPTION</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="age_lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>60</y>
-      <width>201</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>Age</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="inscription_pushButton">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>90</y>
-      <width>94</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>S'inscrire</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="tableWidget">
-    <property name="geometry">
-     <rect>
-      <x>5</x>
-      <y>141</y>
-      <width>1151</width>
-      <height>461</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>0</y>
-      <width>211</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>RECHERCHE PAR PRENOM</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="recherche_lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>20</y>
-      <width>201</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>Prenom</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="rechercher_button">
-    <property name="geometry">
-     <rect>
-      <x>790</x>
-      <y>50</y>
-      <width>94</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Rechercher</string>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>INSCRIPTION</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="prenom_lineEdit">
+      <property name="placeholderText">
+       <string>Prenom</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="age_lineEdit">
+      <property name="placeholderText">
+       <string>Age</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="inscription_pushButton">
+      <property name="text">
+       <string>S'inscrire</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>RECHERCHE PAR PRENOM</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="recherche_lineEdit">
+      <property name="placeholderText">
+       <string>Prenom</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="rechercher_button">
+      <property name="text">
+       <string>Rechercher</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="sauvegarder_button">
+      <property name="text">
+       <string>Sauvegarder</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1181</width>
+     <width>1016</width>
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menumenu">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionouvrir_fichier"/>
+    <addaction name="actionsauvegader_fichier"/>
+   </widget>
+   <widget class="QMenu" name="menuAction">
+    <property name="title">
+     <string>Action</string>
+    </property>
+    <addaction name="actionundo"/>
+    <addaction name="actionredo"/>
+   </widget>
+   <addaction name="menumenu"/>
+   <addaction name="menuAction"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionquitter">
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionouvrir_fichier"/>
+   <addaction name="actionsauvegader_fichier"/>
+   <addaction name="actionundo"/>
+   <addaction name="actionredo"/>
+  </widget>
+  <action name="actionouvrir_fichier">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentOpen"/>
+   </property>
    <property name="text">
-    <string>quitter</string>
+    <string>ouvrir fichier</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+R</string>
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionsauvegader_fichier">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+   </property>
+   <property name="text">
+    <string>sauvegader fichier</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionundo">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditUndo"/>
+   </property>
+   <property name="text">
+    <string>undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionredo">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditRedo"/>
+   </property>
+   <property name="text">
+    <string>redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
    </property>
   </action>
  </widget>
