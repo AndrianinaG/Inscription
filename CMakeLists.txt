@@ -27,6 +27,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etudiant.cpp
         Inscription.h
         Inscription.cpp
+        Command.h
+        Command.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Inscription_universitare APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
