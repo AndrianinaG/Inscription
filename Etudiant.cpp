@@ -1,13 +1,11 @@
-#include"Etudiant.h"
+#include "Etudiant.h"
 
 Etudiant::Etudiant()
 {
-
 }
 
 Etudiant::~Etudiant()
 {
-
 }
 
 QString Etudiant::getPrenom()
